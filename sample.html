@@ -133,6 +133,27 @@
   .dropdown-menu li a:hover {
     background-color: red !important;
   }
+/* menu bottom border */
+.cool-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FF4500;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+/*menu bottom border end */
   footer {
     background-color: #2d2d30;
     color: #f5f5f5;
@@ -159,13 +180,14 @@
   <div class="container-fluid">
     
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">HOME</a></li>
-        <li><a href="#band">Application</a></li>
-        <li><a href="#tour">PROFILE</a></li>
-        <li><a href="#contact">LANG</a></li>
-        <li><a href="#myPage">CONTACT US</a></li>
-        <li class="dropdown">
+      <ul class="nav navbar-nav navbar-right" >
+      	<li><img src="D:/rishi/Saru_logo_Copy.png" width=80  height=100 /></li>
+        <li class="cool-link"><a href="#myPage">HOME</a></li>
+        <li class="cool-link"><a href="#band">Application</a></li>
+        <li class="cool-link"><a href="#tour">PROFILE</a></li>
+        <li class="cool-link"><a href="#contact">LANG</a></li>
+        <li class="cool-link"><a href="#contact">CONTACT US</a></li>
+        <li class="dropdown cool-link">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">ABOUT US  + 
           </span></a>
           <ul class="dropdown-menu">
@@ -174,8 +196,8 @@
             <li><a href="#">Media</a></li> 
           </ul>
         </li>
-        <li><a href="#tour">HALL OF FAME</a></li>
-        <li class="dropdown">
+        <li class="cool-link"><a href="#tour">HALL OF FAME</a></li>
+        <li class="dropdown cool-link">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">SOCIAL LINKS
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -184,8 +206,8 @@
             <li><a href="#">Media</a></li> 
           </ul>
         </li>
-        <li><a href="#myPage">FOUNDER</a></li>
-        <li class="dropdown">
+        <li class="cool-link"><a href="#myPage">FOUNDER</a></li>
+        <li class="dropdown cool-link">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">FAQ 
           </a>
           <ul class="dropdown-menu">
@@ -194,9 +216,9 @@
             <li><a href="#">Media</a></li> 
           </ul>
         </li>
-        <li><a href="#tour">T & C</a></li>
-        <li><a href="#contact">PRODUCTS</a></li>
-        <li class="dropdown">
+        <li class="cool-link"><a href="#tour">T & C</a></li>
+        <li class="cool-link"><a href="#contact">PRODUCTS</a></li>
+        <li class="dropdown cool-link">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">PROCEDURE
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -205,7 +227,7 @@
             <li><a href="#">Media</a></li> 
           </ul>
         </li>
-        <li class="dropdown">
+        <li class="dropdown cool-link">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">GALLERY
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -214,10 +236,10 @@
             <li><a href="#">Media</a></li> 
           </ul>
         </li>
-        <li><a href="#tour">CONNECT SWR</a></li>
-        <li><a href="#contact">RECORDS</a></li>
-        <li><a href="#contact">GENERAL ENQUIRY</a></li>
-        <li class="dropdown">
+        <li class="cool-link"><a href="#tour">CONNECT SWR</a></li>
+        <li class="cool-link"><a href="#contact">RECORDS</a></li>
+        <li class="cool-link"><a href="#contact">GENERAL ENQUIRY</a></li>
+        <li class="dropdown cool-link">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -226,6 +248,9 @@
             <li><a href="#">Media</a></li> 
           </ul>
         </li>
+        <li> 
+           <button class="btn" data-toggle="modal" data-target="#myModal">log in</button>
+      	</li>
         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
       </ul>
     </div>
@@ -323,7 +348,7 @@
 
 <!-- Container (TOUR Section) -->
 <div id="tour" class="bg-1">
-  <div class="container">
+  <!-- <div class="container">
     <h3 class="text-center">TOUR DATES</h3>
     <p class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p>
     <ul class="list-group">
@@ -358,7 +383,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -368,19 +393,23 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+          <h4><span class="glyphicon glyphicon-lock"></span> LOGIN</h4>
         </div>
         <div class="modal-body">
           <form role="form">
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
+           <!--  <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span>USER NAME
+              <input type="text" class="form-control" id="USERNAME" placeholder="Enter user@gmail.com/phone number" width=200%>
+            </div> -->
+             <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span>USER NAME</label>
+              <input type="text" class="form-control" id="USERNAME" placeholder="user@gmail.com/phone number">
             </div>
             <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span>PASSWORD</label>
+              <input type="text" class="form-control" id="PASSWORD" placeholder="Enter your PASSWORD">
             </div>
-              <button type="submit" class="btn btn-block">Pay 
+              <button type="submit" class="btn btn-block" onclick="myLoginFun()">SUBMIT 
                 <span class="glyphicon glyphicon-ok"></span>
               </button>
           </form>
@@ -458,7 +487,7 @@
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
+  <p>TO TOP</p> 
 </footer>
 
 <script>
@@ -470,7 +499,7 @@ $(document).ready(function(){
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
+    
 
       // Prevent default anchor click behavior
       event.preventDefault();
@@ -490,6 +519,43 @@ $(document).ready(function(){
     } // End if
   });
 })
+</script>
+<script type="text/javascript">
+	
+	function myLoginFun(){
+    var userName=document.getElementById('USERNAME').value;
+    var password=document.getElementById('PASSWORD').value;
+
+	var myObject = new Object();
+	myObject.username = userName;
+	myObject.password = password;
+	var myString = JSON.stringify(myObject);
+    
+    console.log("------------------------LOGIN----------------"+userName + ":"+myString);
+    autenticateLogin(myString);
+
+    function autenticateLogin(data1){
+    	 $.ajax({
+             type: "POST",
+             url: "http://localhost:8080/pixel-core-services/services/v1.0/authenticate/fieldAgent",
+             data: data1,// now data come in this function
+             contentType: "application/json; charset=utf-8",
+             crossDomain: true,
+             dataType: "json",
+             success: function (data, status, jqXHR) {
+
+                 alert("success");// write success in " "
+             },
+
+             error: function (jqXHR, status) {
+                 // error handler
+                 console.log(jqXHR);
+                 alert('fail' + status.code);
+             }
+          });
+    }
+
+ }
 </script>
 
 </body>
